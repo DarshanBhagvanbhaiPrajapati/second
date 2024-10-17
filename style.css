@@ -70,8 +70,8 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: #cad7fa;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  background-color: #100d10;
+  box-shadow: 0 1px 4px rgba(76, 155, 235, 0.3);
 }
 section {
   min-height: 100vh;
@@ -79,7 +79,7 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: rgb(32, 32, 32);
+  color: rgb(93, 90, 90);
   font-weight: 800;
   text-align: center;
 }
@@ -91,13 +91,13 @@ header .logo {
   font-weight:bold;
   font-family: Aladin;
   text-decoration: none;
-  color: #0e2431;
+  color: #c9e4ee;
 }
 header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
-  color: #6d19c1;
+  color: #5264ec;
 }
 header .navbar ul {
   list-style: none;
@@ -110,7 +110,7 @@ header .navbar li {
 }
 header .navbar ul li a {
   font-size: 1.57rem;
-  color: #0e2431;
+  color: #c8ddf0;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
@@ -118,7 +118,7 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #0b3c63;
+  color: #6971e4;
   border-bottom: 0.2rem solid #09be75;
   padding: 0.5rem 0;
 }
@@ -128,7 +128,7 @@ header .navbar ul li a:hover {
 #menu {
   font-size: 3rem;
   cursor: pointer;
-  color: rgb(24, 2, 63);
+  color: rgb(243, 241, 247);
   display: none;
 }
 @media (max-width: 768px) {
@@ -143,7 +143,7 @@ header .navbar ul li a:hover {
     height: 100%;
     text-align: left;
     align-items: flex-start;
-    background-color: #0e0f31;
+    background-color: #1b1516;
   }
   header .navbar ul {
     flex-flow: column;
@@ -166,9 +166,9 @@ header .navbar ul li a:hover {
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     padding: 1rem;
-    color: #fff;
+    color: #5c92f6;
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #011aff;
+    border-bottom: 0.5rem solid #2d10d2;
   }
   .fa-times {
     transform: rotate(180deg);
@@ -187,7 +187,36 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+  background: linear-gradient(135deg, #b6fbff, #83a4d4,#beefd0,#c77c9f,#a4d6fc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  
 }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .home {
+    background-size: 300% 300%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home {
+    background-size: 200% 200%;
+  }
+}
+
 .home #particles-js {
   position: absolute;
   top: 0;
@@ -227,7 +256,7 @@ header .navbar ul li a:hover {
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #1ba70c;
+  color: #dd0c2b;
 }
 .home .content p {
   font-size: 2.5rem;
@@ -335,7 +364,10 @@ header .navbar ul li a:hover {
 
 /* about section starts */
 .about {
-  background: rgb(214, 244, 244);
+  background: rgb(236, 233, 250);
+}
+.about .heading{
+  color: #000;
 }
 .about .row {
   display: flex;
@@ -394,7 +426,7 @@ header .navbar ul li a:hover {
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
-  color: #011aff;
+  color: #0b1143;
 }
 
 /* about media queries starts*/
@@ -426,16 +458,18 @@ header .navbar ul li a:hover {
 .skills {
   padding: 50px 0;
   text-align: center;
-  background-color: #faf7f7;
+  background-color: #e3e6ea;
 }
-
+.skills .heading{
+  color: #000;
+}
 .heading {
   font-size: 4em;
   margin-bottom: 30px;
 }
 
 .heading span {
-  color: #3498db;
+  color: #ef236e;
 }
 
 .container {
@@ -452,7 +486,7 @@ header .navbar ul li a:hover {
 
 .skill-box {
   background-color: #f8aeae;
-  background: #e6dada;
+  background: #f2e8e8;
   border-radius: 15px;
   border: 1px solid black;
   width: 200px;
@@ -533,8 +567,11 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #fcfefc;
+  background: #cfd2cf;
   min-height: 80vh;
+}
+.education .heading{
+  color: #000;
 }
 .education .qoute {
   font-size: 2.5rem;
@@ -640,7 +677,16 @@ header .navbar ul li a:hover {
 /* education section ends */
 
 /* Achievements section starts */
+.Achievements{
+  background-color:rgb(185, 225, 241);
+}
+.Achievements .heading{
+  color:#000;
 
+}
+.Achievements .heading .span{
+  color: rgb(141, 16, 163);
+}
 .Achievements .timeline {
   position: relative;
   max-width: 1200px;
